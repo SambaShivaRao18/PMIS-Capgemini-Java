@@ -34,3 +34,18 @@ LeetCode: https://leetcode.com/problems/maximum-product-subarray/submissions/217
   Space Complexity :O(1)
 
 ---
+## Problem: Sort colors[Sort an array containing only 0s,1s and 2s]
+LeetCode: https://leetcode.com/problems/sort-colors/submissions/2174785600/
+ > Approach : Brute Force is use any sorting algorithm or use built-in sort
+  Time Complexity :O(nXlog(n))
+  Space Complexity :O(1)
+
+  > Approach : Count no.of 0s,1s and 2s and fill the array based on them
+  Time Complexity :O(n) Two traversals, Pretty straight forward and simple approach.
+  Space Complexity :O(3)
+
+  > Approach : Using famous Dutch National flag algorithm
+  Time Complexity :O(n) Swapping based on the current value during travrsal.
+  Space Complexity :O(1)
+
+---
