@@ -1,5 +1,5 @@
-## Problem: Majority Element
-LeetCode: https://leetcode.com/problems/majority-element/submissions/2173942181/
+ ## Problem: Majority Element
+ LeetCode: https://leetcode.com/problems/majority-element/submissions/2173942181/
 ---
  ## Problem: Maximum Subarray sum
  LeetCode: https://leetcode.com/problems/maximum-subarray/submissions/2174301348/
@@ -20,6 +20,17 @@ LeetCode: https://leetcode.com/problems/majority-element-ii/submissions/21745800
 
   > Approach : Cancelation technique
   Time Complexity :O(n) which optimal solution for the problem
+  Space Complexity :O(1)
+
+---
+## Problem: Maximum subarray product(Return maxSum)
+LeetCode: https://leetcode.com/problems/maximum-product-subarray/submissions/2174628668/
+ > Approach : Brute Force Using two loops
+  Time Complexity :O(n^2) Might leads to TLE when array size is large.
+  Space Complexity :O(1)
+
+  > Approach : Two way traversal + Ignoring zeros in path
+  Time Complexity :O(n+n) One traversal from front and another from back.
   Space Complexity :O(1)
 
 ---
