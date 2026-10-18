@@ -1,46 +1,60 @@
-
-class Bank
+abstract class Bank
 {
-    static class ABC
-    {
-        public static void sayHii()
-        {
-            System.out.println("HI All!!");
-        }
-    }
-    static String name="HDFC";
-    static 
-    {
-        System.out.println("Welcone to "+name);
-    }
-    private String AccHolderName;
-    private String AccNo;
-    private double balance;
+    private String name;
+    private String accNo;
+    private double bal;
 
-    public Bank(String ahn,String an,double bal)
+    Bank(String n,String an)
     {
-        AccHolderName=ahn;
-        AccNo=an;
-        balance=bal;
+        name=n;
+        accNo=an;
     }
-    public static void guideAccOpen()
+
+    public void getBal()
     {
-        System.out.println("Visit your nearest "+name+" Bank first");
+        System.out.println(this.bal);
+    }
+
+    public void setBal(double b)
+    {
+        bal+=b;
+    }
+
+    abstract void calIntrest();
+}
+
+class savingAcc extends Bank
+{
+    savingAcc(String name,String accNo)
+    {
+        super(name,accNo);
+    }
+    public void calIntrest()
+    {
+        System.out.println("Intrest Rate for Saving Acc is 4%");
     }
 }
+class salaryAcc extends Bank
+{
+    salaryAcc(String name,String accNo)
+    {
+        super(name,accNo);
+    }
+    public void calIntrest()
+    {
+        System.out.println("Intrest Rate for Salary Acc is 6%");
+    }
+}
+
 class keywords
 {
     public static void main(String[] args)
     {
-        Bank b1=new Bank("Samba","1234",12345678);
-        Bank b2=new Bank("Shiva","7890",9876);
+        savingAcc a1=new savingAcc("samba","1234");
 
-        Bank.guideAccOpen();
+        salaryAcc a2=new salaryAcc("shiva","9876");
 
-        Bank.ABC.sayHii();
-
-        // System.out.println(b1.name);
-        // b1.name="ICICI";
-        // System.out.println(b2.name+b1.name);
+        a1.calIntrest();
+        a2.calIntrest();
     }
 }
