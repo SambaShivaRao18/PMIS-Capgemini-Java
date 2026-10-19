@@ -1,8 +1,8 @@
-class BankAccount
+abstract class BankAccount
 {
     //properties
-    String AccNo;
-    String AccHolderName;
+    private String AccNo;
+    private String AccHolderName;
     private double balance;
 
     public BankAccount(String AccNo,String AccHolderName)
@@ -30,12 +30,27 @@ class BankAccount
         this.balance-=amount;
         System.out.println("Dear "+this.AccHolderName+" ₹ "+amount+" debted from your account !!");
     }
+
+    abstract public void calculateIntrest();
+}
+
+class savingAcc extends BankAccount
+{
+    savingAcc(String n,String name)
+    {
+        super(n,name);
+    }
+
+    public void calculateIntrest()
+    {
+        System.out.println("saving Account intrest rate is 3%");
+    }
 }
 public class OOPS
 {
     public static void main(String[] args)
     {
-        BankAccount acc1=new BankAccount("1234567890","Samba Shiva Rao");
+        savingAcc acc1=new savingAcc("1234567890","Samba Shiva Rao");
 
         acc1.checkBal();
 
