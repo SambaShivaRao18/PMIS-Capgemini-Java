@@ -1,16 +1,12 @@
-import java.time.LocalDate;
-import java.time.Month;
+import java.time.LocalDateTime;
 class DateTime
 {
     public static void main(String[] args)
     {
-        LocalDate now=LocalDate.now();
-        System.out.println(now);
+        LocalDateTime now=LocalDateTime.now();
+        
+        System.out.println(now.minusDays(1));
 
-        int day=now.getDayOfMonth();
-        Month month=now.getMonth();
-        int year=now.getYear();
-
-        System.out.println(day+" "+month+" "+year);
+        System.out.println((LocalDateTime)now.minusMonths(186));
     }
 }
